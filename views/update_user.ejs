@@ -1,0 +1,55 @@
+<!-- include header -->
+<%- include('include/_header')%>
+<!-- include header -->
+
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/"> <i class="fas fa-angle-double-left"></i> All Fields</a>
+            </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">
+                Update Field
+            </h2>
+            <span class="text-light">Use the below field to update a field</span>
+        </div>
+
+<!-- include form -->
+<form method="POST" id="update_user">
+    <div class="new_user">
+        <div class="form-group">
+            <label for="name" class="text-light">Assessment</label>
+            <input type="hidden" name="id" value="<%= user._id %>">
+            <input type="text" name="name" value="<%= user.assessment %>">
+        </div>
+        <div class="form-group">
+            <label for="Date" class="text-light">Date</label>
+            <input type="text" name="date" value="<%= user.date %>">
+        </div>
+        <div class="form-group">
+            <label for="Description" class="text-light">Description</label>
+            <input type="text" name="description" value="<%= user.description %>">
+        </div>
+        <div class="form-group">
+            <label for="Mark" class="text-light">Mark</label>
+            <input type="text" name="mark" value="<%= user.mark %>">
+        </div>
+        <div class="form-group">
+            <label for="Grade" class="text-light">Grade</label>
+            <input type="text" name="grade" value="<%= user.grade %>">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+    </div>
+</form>
+<!-- include form -->
+
+    </div>
+</main>
+
+<!-- include footer -->
+<%- include('include/_footer')%>
+<!-- include footer -->
